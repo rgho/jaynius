@@ -62,6 +62,28 @@ function humanReadable(piece)
     "None" #piece not found? defualts to "None"
 end
 
+function colorOf(piece)
+    piece > 10 && piece < 20 ? (return "White") :
+    piece > 20 && piece < 30 ? (return "Black") :
+    "None"
+end
+
+
+function pieceType(piece)
+    # in the future this should simple return the value 
+    # from a pre initialized array with keys matching pieces
+    piece = piece % 10
+    piece == 1 ? (return "Pawn") :
+    piece == 2 ? (return "Knight") :
+    piece == 3 ? (return "Bishop") :
+    piece == 5 ? (return "Rook") :
+    piece == 8 ? (return "Queen") :
+    piece == 9 ? (return "King") :
+    "None" #piece not found? defualts to "None"
+end
+
+
+
 function startingChessboard()
     board = makeBoard(10,10,0)
     for i = 1:8
