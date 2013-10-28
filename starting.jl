@@ -63,15 +63,33 @@ function humanReadable(piece)
 end
 
 function startingChessboard()
-    board = makeEmptyBoard(10,10,0)
+    board = makeBoard(10,10,0)
     for i = 1:8
         board[2,i] = 21
-        board[2,i] = 21
-    end
-    for i = 1:8
-        board[7,i] = 11
         board[7,i] = 11
     end
+    
+    #Rooks
+    board[1,8] = 25
+    board[1,1] = 25
+    board[8,8] = 15
+    board[8,1] = 15
+    #knights
+    board[1,7] = 22
+    board[1,2] = 22
+    board[8,7] = 12
+    board[8,2] = 12
+    #bishops
+    board[1,6] = 23
+    board[1,3] = 23
+    board[8,6] = 13
+    board[8,3] = 13
+    #queens
+    board[1,4] = 28
+    board[8,4] = 18
+    #kings
+    board[1,5] = 29
+    board[8,5] = 19
+
     board
 end
-startingChessboard()  
