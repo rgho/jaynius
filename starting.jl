@@ -44,6 +44,24 @@ function pieceValue(piece)
     0 #piece not found? defualts to 0
 end
 
+function humanReadable(piece)
+    # in the future this should simple return the value 
+    # from a pre initialized array with keys matching pieces
+    piece == 11 ? (return "White pawn") :
+    piece == 12 ? (return "White knight") :
+    piece == 13 ? (return "White bishop") :
+    piece == 15 ? (return "White rook") :
+    piece == 18 ? (return "White queen") :
+    piece == 19 ? (return "White king") :
+    piece == 21 ? (return "Black pawn") :
+    piece == 22 ? (return "Black knight") :
+    piece == 23 ? (return "Black bishop") : 
+    piece == 25 ? (return "Black rook") :
+    piece == 28 ? (return "Black queen") :
+    piece == 29 ? (return "Black king") :
+    "None" #piece not found? defualts to "None"
+end
+
 function startingChessboard()
     board = makeEmptyBoard(10,10,0)
     for i = 1:8
